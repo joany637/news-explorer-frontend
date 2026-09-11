@@ -1,0 +1,22 @@
+.saved-news-header {
+  padding: 40px;
+  text-align: center;
+}
+
+.saved-news-header__label {
+  font-size: 14px;
+  color: var(--accent, #2f71e5);
+  text-transform: uppercase;
+}
+
+.saved-news-header__greeting {
+  margin: 8px 0;
+}
+
+.saved-news-header__count {
+  font-weight: 600;
+}
+
+.saved-news-header__keywords {
+  color: var(--text, #6b6375);
+}

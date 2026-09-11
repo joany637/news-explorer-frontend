@@ -1,0 +1,22 @@
+.news-card-list__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  list-style: none;
+  padding: 0 40px;
+}
+
+.news-card-list__show-more {
+  display: block;
+  margin: 24px auto;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .news-card-list__items {
+    grid-template-columns: 1fr;
+  }
+}

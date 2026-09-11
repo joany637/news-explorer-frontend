@@ -1,0 +1,13 @@
+.main {
+  flex: 1;
+}
+
+.main__not-found,
+.main__error {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.main__error {
+  color: #d32f2f;
+}
