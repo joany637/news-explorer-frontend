@@ -1,4 +1,4 @@
-export const NEWS_API_BASE_URL = "https://newsapi.org/v2/everything";
+export const NEWS_API_BASE_URL = "https://nomoreparties.co/news/v2/everything";
 export const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 export const CARDS_PER_PAGE = 3;
 export const SEARCH_DAYS_RANGE = 7;
