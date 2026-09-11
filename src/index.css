@@ -1,0 +1,29 @@
+:root {
+  --bg: #fbf7ef;
+  --bg-ink: #14213d;
+  --text: #1b1b1b;
+  --text-muted: #6b675c;
+  --text-h: #0f1620;
+  --border: #e4dcc8;
+  --code-bg: #f1ebd9;
+  --accent: #c1272d;
+  --accent-bg: rgba(193, 39, 45, 0.08);
+  --accent-border: rgba(193, 39, 45, 0.4);
+  --social-bg: rgba(228, 220, 200, 0.5);
+  --shadow: none;
+
+  --sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --heading: var(--serif);
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

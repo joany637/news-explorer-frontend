@@ -1,0 +1,43 @@
+.news-card {
+  position: relative;
+  list-style: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-card__save-wrapper {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.news-card__save-button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: not-allowed;
+}
+
+.news-card__save-button_disabled {
+  opacity: 0.5;
+}
+
+.news-card__save-button_active {
+  background: #2f71e5;
+  cursor: pointer;
+}
+
+.news-card__tooltip {
+  position: absolute;
+  top: 34px;
+  right: 0;
+  background: #333;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
