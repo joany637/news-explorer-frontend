@@ -1,16 +1,35 @@
-# React + Vite
+# News Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+News Explorer es una aplicación web que permite buscar noticias de los últimos 7 días sobre cualquier tema, y guardar los artículos que más te interesen en tu cuenta personal.
 
-Currently, two official plugins are available:
+## ¿Qué hace la app?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Buscá noticias por palabra clave usando [News API](https://newsapi.org).
+- Mirá los resultados en tarjetas con imagen, título, descripción, fuente y fecha.
+- Creá una cuenta y guardá los artículos que quieras conservar.
+- Consultá tus artículos guardados agrupados por palabra clave en la sección "Artículos guardados".
+- Diseño responsive, sin scroll horizontal desde 320px de ancho.
 
-## React Compiler
+## Tecnologías utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- React Router
+- Vite
+- CSS (BEM)
+- News API (API de terceros)
+- Fetch API para las solicitudes HTTP
+- JWT para la autenticación con el back-end propio
 
-## Expanding the ESLint configuration
+## Backend del proyecto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Este front-end se conecta a un backend propio hecho con Node.js y Express:
+[news-explorer-backend](https://github.com/joany637/news-explorer-backend)
+
+## Cómo correr el proyecto localmente
+
+```bash
+npm install
+npm run dev
+```
+
+Necesitás un archivo `.env` en la raíz con tu propia clave de News API:
