@@ -1,6 +1,7 @@
 # News Explorer
 
 News Explorer es una aplicación web que permite buscar noticias de los últimos 7 días sobre cualquier tema, y guardar los artículos que más te interesen en tu cuenta personal.
+🔗 [Ver la app desplegada](https://news-explorer-beryl-phi.vercel.app)
 
 ## ¿Qué hace la app?
 
