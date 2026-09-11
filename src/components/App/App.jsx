@@ -22,10 +22,16 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState(() => {
+    const { articles: storedArticles } = getSearchResults();
+    return storedArticles;
+  });
   const [savedArticles, setSavedArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [hasSearched, setHasSearched] = useState(false);
+  const [hasSearched, setHasSearched] = useState(() => {
+    const { articles: storedArticles } = getSearchResults();
+    return storedArticles.length > 0;
+  });
   const [errorMessage, setErrorMessage] = useState("");
 
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -33,14 +39,8 @@ function App() {
   const [authError, setAuthError] = useState("");
   const [tooltip, setTooltip] = useState({ isOpen: false, isSuccess: false });
 
-  // Al montar: recupera búsqueda anterior y sesión activa
+  // Al montar: recupera la sesión activa (si hay token guardado)
   useEffect(() => {
-    const { articles: storedArticles } = getSearchResults();
-    if (storedArticles.length > 0) {
-      setArticles(storedArticles);
-      setHasSearched(true);
-    }
-
     const token = getToken();
     if (token) {
       MainApi.getCurrentUser()

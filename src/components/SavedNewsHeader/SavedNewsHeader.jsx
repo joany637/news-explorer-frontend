@@ -1,5 +1,14 @@
 import "./SavedNewsHeader.css";
 
+function getKeywordsText(sortedKeywords) {
+  if (sortedKeywords.length <= 3) {
+    return sortedKeywords.map(([keyword]) => keyword).join(", ");
+  }
+  const [first, second] = sortedKeywords;
+  const remaining = sortedKeywords.length - 2;
+  return `${first[0]}, ${second[0]} y ${remaining} más`;
+}
+
 function SavedNewsHeader({ savedArticles = [], currentUser }) {
   const keywordCounts = savedArticles.reduce((acc, article) => {
     const key = article.keyword || "General";
@@ -7,16 +16,10 @@ function SavedNewsHeader({ savedArticles = [], currentUser }) {
     return acc;
   }, {});
 
-  const sortedKeywords = Object.entries(keywordCounts).sort((a, b) => b[1] - a[1]);
-
-  let keywordsText = "";
-  if (sortedKeywords.length <= 3) {
-    keywordsText = sortedKeywords.map(([keyword]) => keyword).join(", ");
-  } else {
-    const [first, second] = sortedKeywords;
-    const remaining = sortedKeywords.length - 2;
-    keywordsText = `${first[0]}, ${second[0]} y ${remaining} más`;
-  }
+  const sortedKeywords = Object.entries(keywordCounts).sort(
+    (a, b) => b[1] - a[1]
+  );
+  const keywordsText = getKeywordsText(sortedKeywords);
 
   return (
     <div className="saved-news-header">

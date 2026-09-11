@@ -1,6 +1,6 @@
 import { getToken } from "./token";
 
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://news-explorer-joany.duckdns.org";
 
 function checkResponse(res) {
   if (res.ok) {
